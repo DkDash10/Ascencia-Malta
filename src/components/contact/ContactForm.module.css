@@ -1,0 +1,110 @@
+.form {
+  background: var(--clr-white);
+  border-radius: var(--radius-md);
+  padding: 3rem;
+  box-shadow: var(--shadow-md);
+  flex: 2;
+}
+
+.formHeading {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--clr-navy);
+  margin-bottom: 0.4rem;
+}
+
+.formSubtitle {
+  font-size: 0.875rem;
+  color: var(--clr-muted);
+  margin-bottom: 2rem;
+}
+
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.group {
+  margin-bottom: 1.25rem;
+}
+
+.group label {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--clr-navy);
+  margin-bottom: 0.5rem;
+}
+
+.group input,
+.group select,
+.group textarea {
+  width: 100%;
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-sm);
+  padding: 0.78rem 1rem;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--clr-text);
+  background: var(--clr-cream);
+  outline: none;
+  transition: border-color var(--transition), box-shadow var(--transition), background var(--transition);
+  resize: none;
+}
+
+.group input:focus,
+.group select:focus,
+.group textarea:focus {
+  border-color: var(--clr-gold);
+  box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.13);
+  background: var(--clr-white);
+}
+
+.group textarea {
+  height: 130px;
+}
+
+.submit {
+  width: 100%;
+  padding: 1rem;
+  margin-top: 0.5rem;
+  background: var(--clr-navy);
+  color: var(--clr-white);
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: background var(--transition), transform var(--transition);
+}
+
+.submit:hover {
+  background: var(--clr-gold);
+  color: var(--clr-navy-deep);
+  transform: translateY(-1px);
+}
+
+.success {
+  background: #d4edda;
+  border: 1px solid #b7dfbf;
+  color: #1a5c2a;
+  border-radius: var(--radius-sm);
+  padding: 1rem 1.25rem;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+  line-height: 1.6;
+}
+
+
+@media (max-width: 640px) {
+  .form { padding: 2rem 1.5rem; }
+  .row  { grid-template-columns: 1fr; }
+}

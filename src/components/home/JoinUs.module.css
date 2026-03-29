@@ -1,0 +1,147 @@
+.whySection {
+  position: relative;
+  overflow: hidden;
+  padding: var(--sp-xl) var(--sp-md);
+}
+
+.whyBg {
+  position: absolute;
+  inset: 0;
+  background-image: url('https://www.ascencia-business-school.mt/wp-content/uploads/2023/01/malta-ascencia-bs.jpg');
+  background-size: cover;
+  background-position: center 40%;
+}
+
+.whyOverlay {
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    160deg,
+    var(--clr-navy),
+    var(--clr-navy-deep),
+    var(--clr-navy-mid)
+  );
+  animation: gradientFlow 10s linear infinite;
+}
+.whyOverlay::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,255,255,0.05),
+    transparent
+  );
+  animation: shine 6s linear infinite;
+}
+
+@keyframes shine {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+.whyInner {
+  position: relative;
+  z-index: 2;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.whyHeading {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 4vw, 3.6rem);
+  font-weight: 300;
+  line-height: 1.1;
+  color: var(--clr-white);
+  margin-bottom: 1.5rem;
+}
+
+.whyHeading em {
+  font-style: italic;
+  color: var(--clr-gold);
+}
+
+.whyDesc {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1rem;
+  line-height: 1.85;
+  max-width: 440px;
+  margin-bottom: 2.5rem;
+}
+
+.whyActions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.perksGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.perkCard {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(201, 168, 76, 0.18);
+  border-radius: var(--radius-md);
+  padding: 1.6rem 1.4rem;
+  transition: background var(--transition), border-color var(--transition), transform var(--transition);
+}
+
+.perkCard:hover {
+  background: rgba(201, 168, 76, 0.08);
+  border-color: rgba(201, 168, 76, 0.4);
+  transform: translateY(-3px);
+}
+
+.perkIcon {
+  display: block;
+  font-size: 1.6rem;
+  margin-bottom: 0.75rem;
+}
+
+.perkTitle {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--clr-white);
+  margin-bottom: 0.45rem;
+}
+
+.perkDesc {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 1.65;
+}
+
+@media (max-width: 1024px) {
+  .whyInner {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+  }
+  .whyDesc { max-width: 100%; }
+}
+
+@media (max-width: 768px) {
+  .perksGrid { display: none; }
+  .workHeader { flex-direction: column; align-items: flex-start; }
+}
+
+@media (max-width: 480px) {
+  .rolesGrid { grid-template-columns: 1fr; }
+}

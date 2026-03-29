@@ -1,0 +1,21 @@
+.mapWrap {
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.mapWrap iframe {
+  width: 100%;
+  max-width: var(--max-width);
+  height: 100%;
+  border: none;
+  display: block;
+  padding-bottom: 1rem;
+  margin: 0 1rem;
+}
+
+@media (max-width: 640px) {
+  .mapWrap { height: 300px; }
+}

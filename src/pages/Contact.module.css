@@ -1,0 +1,16 @@
+.contactLayout {
+  display: flex;
+  gap: 5rem;
+  align-items: center;
+}
+
+@media (max-width: 1024px) {
+  .contactLayout {
+    gap: 3rem;
+  }
+}
+@media (max-width: 768px) {
+  .contactLayout {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,71 @@
+.grid {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.text {
+  flex: 1;
+  order: 1;
+}
+
+.text .subtitle {
+  max-width: 100%;
+  margin-bottom: 1.25rem;
+}
+
+.missionBox {
+  background: var(--clr-cream);
+  border-left: 3px solid var(--clr-gold);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  padding: 1.75rem 2rem;
+  margin-top: 2rem;
+}
+
+.missionBox h4 {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--clr-navy);
+  margin-bottom: 0.75rem;
+}
+
+.missionBox p {
+  font-size: 0.9rem;
+  color: var(--clr-muted);
+  line-height: 1.82;
+}
+
+.imgWrap {
+  flex: 1;
+  order: 2;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  aspect-ratio: 1;
+}
+
+.imgWrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s var(--ease);
+}
+
+.imgWrap:hover img { transform: scale(1.03); }
+
+@media (max-width: 1024px) {
+  .grid {
+    gap: 2rem;
+  }
+}
+@media (max-width: 768px) {
+   .grid {
+    flex-direction: column;
+  }
+  .text{
+    order: 2;
+  }
+  .imgWrap { 
+    max-height: 350px;
+    order: 1;
+  }
+}

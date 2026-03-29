@@ -1,0 +1,141 @@
+.footer {
+  background: var(--clr-navy-deep);
+  color: rgba(255, 255, 255, 0.55);
+  padding: 5rem 2rem 2rem;
+}
+
+.grid {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 4rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.brandName em {
+  color: var(--clr-gold);;
+}
+
+.brandName {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--clr-white);
+  display: block;
+}
+
+.brandSub {
+  font-size: 0.6rem;
+  color: var(--clr-gold);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  display: block;
+  margin-top: 3px;
+}
+
+.brandDesc {
+  margin: 1.25rem 0;
+  font-size: 0.875rem;
+  line-height: 1.8;
+  max-width: 270px;
+}
+
+.socials {
+  display: flex;
+  gap: 0.6rem;
+  margin-top: 1.5rem;
+}
+
+.socialBtn {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1rem;
+  font-family: var(--font-body);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: default;
+  transition: background var(--transition), border-color var(--transition), color var(--transition);
+}
+
+.socialBtn:hover {
+  background: var(--clr-gold);
+  border-color: var(--clr-gold);
+  color: var(--clr-navy-deep);
+}
+
+.col h5 {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--clr-white);
+  margin-bottom: 1.25rem;
+}
+
+.navList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.navList li {
+  font-size: 0.875rem;
+}
+
+.navList button {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.5);
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  padding: 0;
+  cursor: pointer;
+  transition: color var(--transition);
+  text-align: left;
+}
+
+.navList button:hover,
+.navList a:hover {
+  color: var(--clr-gold);
+}
+
+.navList a {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.875rem;
+  transition: color var(--transition);
+}
+
+.bottom {
+  max-width: var(--max-width);
+  margin: 2rem auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.28);
+}
+
+.accredLine {
+  font-size: 0.75rem;
+}
+
+.gold {
+  color: var(--clr-gold);
+  opacity: 0.7;
+}
+
+@media (max-width: 1024px) {
+  .grid { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+}
+
+@media (max-width: 640px) {
+  .grid { grid-template-columns: 1fr; gap: 2rem; }
+  .bottom { flex-direction: column; gap: 0.5rem; text-align: center; }
+}

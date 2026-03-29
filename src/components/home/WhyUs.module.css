@@ -1,0 +1,304 @@
+.aboutStrip {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.stripCopy .subtitle {
+  color: rgba(255, 255, 255, 0.6);
+  max-width: 100%;
+  margin-bottom: 2rem;
+}
+
+.stripTitle {
+  color: var(--clr-white) !important;
+}
+
+.imgWrap {
+  position: relative;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+}
+
+.imgWrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.imgBadge {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  background: var(--clr-gold);
+  color: var(--clr-navy-deep);
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius-sm);
+}
+
+.imgBadge strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.imgBadge span {
+  display: block;
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+
+.floGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 1rem;
+  margin-top: 3rem;
+}
+
+.floCard {
+  background: var(--clr-white);
+  border-radius: var(--radius-sm);
+  padding: 1.75rem 1.5rem;
+  border: 1px solid var(--clr-border);
+  transition:
+    box-shadow var(--transition),
+    transform var(--transition);
+}
+
+.floCard:hover {
+  box-shadow: var(--shadow-sm);
+  transform: translateY(-3px);
+}
+
+.floIcon {
+  font-size: 1.75rem;
+  margin-bottom: 0.75rem;
+}
+.floTitle {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--clr-navy);
+  margin-bottom: 0.5rem;
+}
+.floDesc {
+  font-size: 0.82rem;
+  color: var(--clr-muted);
+  line-height: 1.65;
+}
+
+.campusGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.campusCard {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  position: relative;
+  aspect-ratio: 16 / 9;
+}
+
+.campusCard img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.55s var(--ease);
+}
+
+.campusCard:hover img {
+  transform: scale(1.05);
+}
+
+.campusOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(7, 21, 40, 1) 0%, transparent 75%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 2rem;
+}
+
+.campusOverlay h3 {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--clr-white);
+  margin-bottom: 0.4rem;
+}
+
+.campusOverlay p {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+.directorGrid {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 5rem;
+  align-items: start;
+}
+
+.directorPhoto {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  position: relative;
+  aspect-ratio: 3 / 4;
+}
+
+.directorPhoto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.directorCaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(7, 21, 40, 0.92));
+  padding: 2.5rem 1.5rem 1.5rem;
+}
+
+.directorCaption strong {
+  display: block;
+  color: var(--clr-white);
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+}
+
+.directorCaption span {
+  color: var(--clr-gold);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.directorQuote {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.6;
+  color: var(--clr-navy);
+  border-left: 3px solid var(--clr-gold);
+  padding-left: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.directorBody {
+  color: var(--clr-muted);
+  line-height: 1.88;
+  font-size: 0.95rem;
+  margin-bottom: 1.25rem;
+}
+
+
+.accred {
+  margin-top: 3rem;
+  border-radius: 16px;
+}
+
+
+
+.accred__block + .accred__block {
+  border-top: 1px solid var(--clr-border);
+  padding-top: 2rem;
+}
+
+
+.accred__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20%, 1fr));
+  gap: 1.25rem;
+}
+
+.accred__card {
+  border-radius: 12px;
+  padding: 1.25rem;
+  min-height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+}
+
+.accred__card:hover {
+  transform: translateY(-6px);
+}
+
+.accred__img {
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.7;
+  transition: all 0.25s ease;
+}
+
+.accred__card:hover .accred__img {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+.accred__collab {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.accred__collabItem {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.5;
+  transition: all 0.25s ease;
+  text-decoration: none;
+}
+.accred__collabItem:active {
+  transform: scale(0.96);
+}
+.accred__collabItem:hover {
+  opacity: 1;
+  transform: scale(1.08);
+}
+.accred__collabImg {
+  object-fit: contain;
+}
+
+@media (max-width: 1024px) {
+  .aboutStrip {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .directorGrid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .directorPhoto {
+    aspect-ratio: 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .campusGrid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 640px) {
+   .accred__grid{
+    grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
+  }
+}

@@ -1,0 +1,21 @@
+.section {
+  padding: var(--sp-xl) var(--sp-md);
+}
+
+.inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+/* Background variants */
+.bgCream       { background: var(--clr-cream); }
+.bgCreamDark   { background: var(--clr-cream-dark); }
+.bgWhite       { background: var(--clr-white); }
+.bgNavy        { background: var(--clr-navy); }
+.bgNavyDeep    { background: var(--clr-navy-deep); }
+
+/* Padding variants */
+.paddingSm  { padding-top: var(--sp-lg); padding-bottom: var(--sp-lg); }
+.paddingMd  { padding-top: var(--sp-xl); padding-bottom: var(--sp-xl); }
+.paddingLg  { padding-top: var(--sp-2xl); padding-bottom: var(--sp-2xl); }
+.paddingNone { padding: 0; }

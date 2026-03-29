@@ -1,0 +1,72 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.875rem 2rem;
+  border-radius: var(--radius-sm);
+  border: none;
+  cursor: pointer;
+  transition: transform var(--transition), box-shadow var(--transition), background var(--transition), color var(--transition), border-color var(--transition);
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.primary {
+  background: var(--clr-gold);
+  color: var(--clr-navy-deep);
+}
+.primary:hover {
+  background: var(--clr-gold-light);
+  box-shadow: 0 6px 24px rgba(201, 168, 76, 0.32);
+}
+
+.outlineLight {
+  background: transparent;
+  color: var(--clr-white);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+.outlineLight:hover {
+  border-color: var(--clr-gold);
+  color: var(--clr-gold);
+}
+
+.outlineDark {
+  background: transparent;
+  color: var(--clr-navy);
+  border: 1px solid var(--clr-border);
+}
+.outlineDark:hover {
+  border-color: var(--clr-gold);
+  color: var(--clr-gold);
+}
+
+
+.dark {
+  background: var(--clr-navy);
+  color: var(--clr-white);
+}
+.dark:hover {
+  background: var(--clr-gold);
+  color: var(--clr-navy-deep);
+}
+
+
+.sm {
+  font-size: 0.72rem;
+  padding: 0.6rem 1.25rem;
+}
+
+.lg {
+  font-size: 0.85rem;
+  padding: 1.05rem 2.5rem;
+}

@@ -1,0 +1,266 @@
+.headerRow {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.headerText {
+  flex: 1;
+  min-width: 0;
+}
+
+.navBtns {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-shrink: 0;
+  padding-bottom: 0.25rem;
+}
+
+.navBtn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1.5px solid var(--clr-border);
+  background: var(--clr-white);
+  color: var(--clr-navy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition:
+    background   var(--transition),
+    border-color var(--transition),
+    color        var(--transition),
+    transform    var(--transition),
+    box-shadow   var(--transition);
+}
+
+.navBtn:hover:not(.navBtnDisabled) {
+  background: var(--clr-navy);
+  border-color: var(--clr-navy);
+  color: var(--clr-white);
+  transform: scale(1.07);
+  box-shadow: var(--shadow-sm);
+}
+
+.navBtn:focus-visible {
+  outline: 2px solid var(--clr-gold);
+  outline-offset: 3px;
+}
+
+.navBtnDisabled {
+  opacity: 0.32;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+
+.carouselOuter {
+  position: relative;
+  margin: 0 -0.5rem;
+}
+
+.fade {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 72px;
+  z-index: 2;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+
+
+.fadeHidden {
+  opacity: 0;
+}
+
+.track {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding: 0.5rem 0.5rem 1rem;   
+  cursor: grab;
+  scrollbar-width: none;          
+  -ms-overflow-style: none;       
+}
+
+.track::-webkit-scrollbar {
+  display: none;                 
+}
+
+.trackDragging {
+  cursor: grabbing;
+  scroll-behavior: auto;          
+  user-select: none;
+}
+
+.slide {
+  flex: 0 0 calc(
+    (100% - (var(--visible, 3) - 1) * 1.5rem) / var(--visible, 3)
+  );
+  scroll-snap-align: start;
+}
+
+.progCard {
+  height: 100%;
+  cursor: default;
+  display: flex;
+  flex-direction: column;
+  padding: 0 !important;
+  overflow: hidden;
+}
+
+.cardInner {
+  padding: 2rem 1.75rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.iconWrap {
+  width: 50px;
+  height: 50px;
+  background: var(--clr-gold-dim);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.4rem;
+  flex-shrink: 0;
+  transition: background var(--transition), transform var(--transition);
+}
+
+.progCard:hover .iconWrap {
+  background: var(--clr-gold);
+  transform: scale(1.08);
+}
+
+.icon {
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.level {
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--clr-gold);
+  margin-bottom: 0.45rem;
+}
+
+.name {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--clr-navy);
+  margin-bottom: 0.75rem;
+  line-height: 1.25;
+}
+
+.desc {
+  font-size: 0.875rem;
+  color: var(--clr-muted);
+  line-height: 1.75;
+  flex: 1;                         
+}
+
+.learnMore {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 1.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--clr-navy);
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity var(--transition), transform var(--transition), color var(--transition);
+}
+
+.progCard:hover .learnMore {
+  opacity: 1;
+  transform: translateY(0);
+  color: var(--clr-gold);
+}
+
+.carouselFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2rem;
+  padding: 0 0.5rem;
+}
+
+.dots {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background: var(--clr-border);
+  cursor: pointer;
+  padding: 0;
+  transition: background var(--transition), width var(--transition), border-radius var(--transition);
+}
+
+.dotActive {
+  width: 28px;
+  border-radius: 4px;
+  background: var(--clr-gold);
+}
+
+.counter {
+  font-size: 0.8rem;
+  color: var(--clr-muted);
+  letter-spacing: 0.04em;
+  font-variant-numeric: tabular-nums;
+}
+
+.counter strong {
+  color: var(--clr-navy);
+  font-weight: 600;
+}
+
+.counterTotal {
+  opacity: 0.55;
+}
+
+@media (max-width: 1024px) {
+  .headerRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+  .navBtns {
+    padding-bottom: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .navBtn {
+    width: 42px;
+    height: 42px;
+  }
+  .fade {
+    width: 40px;
+  }
+  .cardInner {
+    padding: 1.5rem 1.4rem;
+  }
+}
